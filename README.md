@@ -1,11 +1,11 @@
 # PTXprofiler
 A simple profiler to count Nvidia [PTX assembly](https://docs.nvidia.com/cuda/parallel-thread-execution/) instructions of [OpenCL](https://github.com/ProjectPhysX/OpenCL-Wrapper)/CUDA kernels for [roofline model](https://en.wikipedia.org/wiki/Roofline_model) analysis.
 
-## Compile
+## How to compile?
 - on Windows: compile with Visual Studio Community
 - on Linux: run `chmod +x make.sh` and `./make.sh path/to/kernel.ptx`
 
-## Usage
+## How to use?
 1. Generate a `.ptx` file from your application; this works only with an Nvidia GPU. With the [OpenCL-Wrapper](https://github.com/ProjectPhysX/OpenCL-Wrapper), you can simply uncomment `#define PTX` in [`src/opencl.hpp`](https://github.com/ProjectPhysX/OpenCL-Wrapper/blob/master/src/opencl.hpp#L4) and compile and run. A file `kernel.ptx` is created, containing the PTX assembly code.
 2. Run `bin/PTXprofiler.exe path/to/kernel.ptx`. For [FluidX3D](https://github.com/ProjectPhysX/FluidX3D) for example, this table is generated:
 ```

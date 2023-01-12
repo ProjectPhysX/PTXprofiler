@@ -1,5 +1,5 @@
 # PTXprofiler
-A simple profiler to count Nvidia [PTX assembly](https://docs.nvidia.com/cuda/parallel-thread-execution/) instructions of [OpenCL](https://github.com/ProjectPhysX/OpenCL-Wrapper)/CUDA kernels for [roofline model](https://en.wikipedia.org/wiki/Roofline_model) analysis.
+A simple profiler to count Nvidia [PTX assembly](https://docs.nvidia.com/cuda/parallel-thread-execution/) instructions of [OpenCL](https://github.com/ProjectPhysX/OpenCL-Wrapper)/SYCL/CUDA kernels for [roofline model](https://en.wikipedia.org/wiki/Roofline_model) analysis.
 
 ## How to compile?
 - on Windows: compile with Visual Studio Community

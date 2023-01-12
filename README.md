@@ -6,7 +6,7 @@ A simple profiler to count Nvidia [PTX assembly](https://docs.nvidia.com/cuda/pa
 - on Linux: run `chmod +x make.sh` and `./make.sh path/to/kernel.ptx`
 
 ## How to use?
-1. Generate a `.ptx` file from your application; this works only with an Nvidia GPU. With the [OpenCL-Wrapper](https://github.com/ProjectPhysX/OpenCL-Wrapper), you can simply uncomment `#define PTX` in [`src/opencl.hpp`](https://github.com/ProjectPhysX/OpenCL-Wrapper/blob/master/src/opencl.hpp#L4) and compile and run. A file `kernel.ptx` is created, containing the PTX assembly code.
+1. Generate a `.ptx` file from your application; this works only with an Nvidia GPU. With the [OpenCL-Wrapper](https://github.com/ProjectPhysX/OpenCL-Wrapper), you can simply uncomment `#define PTX` in [`src/opencl.hpp`](https://github.com/ProjectPhysX/OpenCL-Wrapper/blob/master/src/opencl.hpp#L4) and compile and run. A file `kernel.ptx` is created, containing the [PTX assembly](https://docs.nvidia.com/cuda/parallel-thread-execution/) code.
 2. Run `bin/PTXprofiler.exe path/to/kernel.ptx`. For [FluidX3D](https://github.com/ProjectPhysX/FluidX3D) for example, this table is generated:
 ```
 kernel name                     |flops  (float int    bit  )|copy  |branch|cache  (load  store)|memory (load  cached store)

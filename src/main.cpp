@@ -57,7 +57,7 @@ string alignr(const uint n, const uint x) { // converts x to string with spaces 
 vector<string> split_regex(const string& s, const string& separator="\\s+") {
 	vector<string> r;
 	const std::regex rgx(separator);
-	std::sregex_token_iterator token(s.begin(), s.end()+1, rgx, -1), end;
+	std::sregex_token_iterator token(s.begin(), s.end(), rgx, -1), end;
 	while(token!=end) {
 		r.push_back(*token);
 		token++;
